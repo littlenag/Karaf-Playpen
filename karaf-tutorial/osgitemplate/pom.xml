@@ -75,7 +75,7 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<copy file="target/${artifactId}-${version}.jar" todir="/home/mkegel/bin/apache-karaf-2.2.0/deploy" />
+								<copy file="target/${artifactId}-${version}.jar" todir="/${user.home}/bin/apache-karaf-2.2.1/deploy" />
 							</tasks>
 						</configuration>
 					</execution>
