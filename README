@@ -5,3 +5,7 @@ Files:
 http://www.liquid-reality.de/display/liquid/2011/02/15/Karaf+Tutorial+Part+1+-+Installation+and+First+application
 
 I downloaded the tutorial files, but they actually came from github initally. See https://github.com/cschneider/Karaf-Tutorial/zipball/master
+
+
+To connect to eclipse:
+ # mvn -Declipse.workspace=~/workspace eclipse:eclipse

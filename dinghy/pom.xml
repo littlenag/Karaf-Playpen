@@ -10,8 +10,8 @@
 
     <modules>
         <module>core</module>
-        <module>ui.ahab</module>
-        <module>ui.ishmael</module>
+        <module>ahab</module>
+        <module>ishmael</module>
         <module>features</module>
     </modules>
 
