@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.lr.tasklist</groupId>
+    <artifactId>tasklist-features</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <activemq.version>5.4.2</activemq.version>
+        <cxf.version>2.3.2</cxf.version>
+        <camel.version>2.6.0</camel.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
+        <spring-security.version>3.0.5.RELEASE</spring-security.version>
+        <jetty.version>7.2.2.v20101205</jetty.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <karaf.version>2.2.1</karaf.version>
+    </properties>
+
+    <dependencies>
+      <dependency>
+	<groupId>net.lr.tasklist</groupId>
+	<artifactId>tasklist-ui</artifactId>
+	<version>1.0</version>
+      </dependency>
+      <dependency>
+	<groupId>net.lr.tasklist</groupId>
+	<artifactId>tasklist-persistence</artifactId>
+	<version>2.0</version>
+      </dependency>
+    </dependencies>
+
+    <build>
+      <plugins>
+	<plugin>
+	  <groupId>org.apache.karaf.tooling</groupId> 
+	  <artifactId>features-maven-plugin</artifactId> 
+	  <version>${karaf.version}</version> 
+	  <executions> 
+            <execution>
+              <id>generate</id> 
+              <phase>generate-resources</phase> 
+              <goals> 
+		<goal>generate-features-xml</goal> 
+              </goals> 
+              <configuration> 
+		<descriptors>
+		  <bundles>src/main/resource/bundles.properties</bundles>
+		  <kernelVersion>2.2.1</kernelVersion>
+		  <outputFile>target/features.xml</outputFile>
+		</descriptors> 
+		<features> 
+		  <feature>tasklist-feature</feature> 
+		</features> 
+		<repository>target/features-repo</repository> 
+              </configuration> 
+            </execution>
+            <execution>
+              <id>add-features-to-repo</id>
+              <phase>package</phase>
+              <goals>
+		<goal>add-features-to-repo</goal>
+              </goals>
+              <configuration>
+		<descriptors>
+                  <descriptor>file:${basedir}/target/classes/feature.xml</descriptor>
+		</descriptors>
+		<repository>target/features-repo</repository>
+              </configuration>
+            </execution>
+	  </executions>
+	</plugin>
+     </plugins>
+   </build>
+</project>
