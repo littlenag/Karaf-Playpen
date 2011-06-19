@@ -9,8 +9,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>dinghy.persistence</module>
-        <module>dinghy.ui</module>
+        <module>dinghy.core</module>
+        <module>dinghy.ui.alpha</module>
+        <module>dinghy.ui.beta</module>
         <module>dinghy.features</module>
     </modules>
 
