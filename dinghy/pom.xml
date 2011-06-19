@@ -9,10 +9,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>dinghy.core</module>
-        <module>dinghy.ui.alpha</module>
-        <module>dinghy.ui.beta</module>
-        <module>dinghy.features</module>
+        <module>core</module>
+        <module>ui.ahab</module>
+        <module>ui.ishmael</module>
+        <module>features</module>
     </modules>
 
 </project>
