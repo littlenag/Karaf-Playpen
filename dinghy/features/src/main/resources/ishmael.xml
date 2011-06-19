@@ -4,6 +4,6 @@
         <feature version="2.1.3">http</feature>
         <feature>dinghy-core</feature>
         <bundle>mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/0.7.4</bundle>
-        <bundle>mvn:littlenag.dinghy/ui.ishmael/1.0</bundle>
+        <bundle>mvn:littlenag.dinghy/ishmael/1.0</bundle>
     </feature>
 </features>
