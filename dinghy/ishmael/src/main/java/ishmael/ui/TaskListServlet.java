@@ -16,10 +16,7 @@ import dinghy.core.model.TaskService;
 public class TaskListServlet extends HttpServlet {
 	TaskService taskService;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 34992072289535683L;
+	private static final long serialVersionUID = 1935721380162672104L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
