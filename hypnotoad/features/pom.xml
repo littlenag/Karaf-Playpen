@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>littlenag.dinghy</groupId>
+  <artifactId>features</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  
+  <properties>
+    <activemq.version>5.4.2</activemq.version>
+    <cxf.version>2.3.2</cxf.version>
+    <camel.version>2.6.0</camel.version>
+    <spring.version>3.0.5.RELEASE</spring.version>
+    <spring-security.version>3.0.5.RELEASE</spring-security.version>
+    <jetty.version>7.2.2.v20101205</jetty.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <karaf.version>2.2.1</karaf.version>
+  </properties>
+    
+  <dependencies>
+    <dependency>
+      <groupId>littlenag.dinghy</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+  </build>
+</project>

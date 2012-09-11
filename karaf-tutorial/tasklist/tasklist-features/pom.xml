@@ -38,7 +38,8 @@
 	<plugin>
 	  <groupId>org.apache.karaf.tooling</groupId> 
 	  <artifactId>features-maven-plugin</artifactId> 
-	  <version>${karaf.version}</version> 
+	  <version>${karaf.version}</version>
+	  <extensions>true</extensions>
 	  <executions> 
             <execution>
               <id>generate</id> 
@@ -49,15 +50,13 @@
               <configuration> 
 		<descriptors>
 		  <bundles>src/main/resource/bundles.properties</bundles>
-		  <kernelVersion>2.2.1</kernelVersion>
+		  <kernelVersion>${karaf.version}</kernelVersion>
 		  <outputFile>target/features.xml</outputFile>
 		</descriptors> 
-		<features> 
-		  <feature>tasklist-feature</feature> 
-		</features> 
-		<repository>target/features-repo</repository> 
               </configuration> 
             </execution>
+
+<!--
             <execution>
               <id>add-features-to-repo</id>
               <phase>package</phase>
@@ -71,8 +70,11 @@
 		<repository>target/features-repo</repository>
               </configuration>
             </execution>
+
+-->
 	  </executions>
 	</plugin>
+
      </plugins>
    </build>
 </project>
