@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <feature name="hypnotoad" version="1.0">
+        <bundle>mvn:littlenag.hypnotoad/core/1.0</bundle>
+        <bundle>mvn:littlenag.hypnotoad/ahab/1.0</bundle>
+    </feature>
+</features>
